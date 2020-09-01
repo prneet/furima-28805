@@ -16,16 +16,16 @@ Things you may want to cover:
 
 ## users テーブル
 
-| Column       | Type   | Options     |
-| --------     | ------ | ----------- |
-| name         | string | null: false |
-| email        | string | null: false |
-| password     | string | null: false |
-| first_name_z | string | null: false |
-| last_name_z  | string | null: false |
-| first_name_k | string | null: false |
-| last_name_k  | string | null: false |
-| birthday     | date   | null: false |
+| Column          | Type   | Options     |
+| --------------- | ------ | ----------- |
+| name            | string | null: false |
+| email           | string | null: false |
+| password        | string | null: false |
+| first_name      | string | null: false |
+| last_name       | string | null: false |
+| first_name_kana | string | null: false |
+| last_name_kana  | string | null: false |
+| birthday        | date   | null: false |
 
 ### Association
 
@@ -35,7 +35,7 @@ Things you may want to cover:
 ## items テーブル
 
 | Column      | Type       | Options                        |
-| ------      | ------     | -----------                    |
+| ----------- | ---------- | ------------------------------ |
 | name        | string     | null: false                    |
 | price       | integer    | null: false                    |
 | text        | string     | null: false                    |
@@ -59,7 +59,7 @@ Things you may want to cover:
 ## orders テーブル
 
 | Column | Type       | Options                        |
-| ------ | ------     | -----------                    |
+| ------ | ---------- | ------------------------------ |
 | user   | references | null: false, foreign_key: true |
 | item   | references | null: false, foreign_key: true |
 
@@ -71,7 +71,7 @@ Things you may want to cover:
 
 ## addresses テーブル
 | Column       | Type       | Options                        |
-| --------     | ------     | -----------                    |
+| ------------ | ---------- | ------------------------------ |
 | postal_code  | string     | null: false                    |
 | region_id    | integer    | null: false                    |
 | cty          | string     | null: false                    |
