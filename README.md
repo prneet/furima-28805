@@ -68,6 +68,7 @@ Things you may want to cover:
 
 - belongs_to :item
 - belongs_to :user
+- has_one :address
 
 ## addresses テーブル
 | Column       | Type       | Options                        |
@@ -80,7 +81,6 @@ Things you may want to cover:
 
 ### Association
 
-- has_many :regions
 - belongs_to :order
 - belongs_to_active_hash :region
 
@@ -96,19 +96,19 @@ Things you may want to cover:
 | -------- | ------ | ----------- |
 | name     | string | null: false |
 
-## postage
+## postages
 
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
 | name     | string | null: false |
 
-## post_day
+## post_days
 
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
 | name     | string | null: false |
 
-## status
+## statuses
 
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
