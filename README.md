@@ -44,7 +44,7 @@ Things you may want to cover:
 | status_id   | integer    | null: false                    |
 | region_id   | integer    | null: false                    |
 | post_day_id | integer    | null: false                    |
-| user_id     | references | null: false, foreign_key: true |
+| user        | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -58,10 +58,10 @@ Things you may want to cover:
 
 ## orders テーブル
 
-| Column    | Type       | Options                        |
-| ------    | ------     | -----------                    |
-| user_id   | references | null: false, foreign_key: true |
-| item_id   | references | null: false, foreign_key: true |
+| Column | Type       | Options                        |
+| ------ | ------     | -----------                    |
+| user   | references | null: false, foreign_key: true |
+| item   | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -78,7 +78,7 @@ Things you may want to cover:
 | build        | string     |                                |
 | address      | string     | null: false                    |
 | phone_number | string     | null: false                    |
-| order_id     | references | null: false, foreign_key: true |
+| order        | references | null: false, foreign_key: true |
 
 ### Association
 
