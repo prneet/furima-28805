@@ -38,7 +38,6 @@ Things you may want to cover:
 | ------      | ------     | -----------                    |
 | name        | string     | null: false                    |
 | price       | integer    | null: false                    |
-| image       | string     | null: false                    |
 | text        | string     | null: false                    |
 | genre_id    | integer    | null: false                    |
 | postage_id  | integer    | null: false                    |
@@ -73,10 +72,12 @@ Things you may want to cover:
 ## addresses テーブル
 | Column       | Type       | Options                        |
 | --------     | ------     | -----------                    |
-| postal_code  | integer    | null: false                    |
+| postal_code  | string     | null: false                    |
 | region_id    | integer    | null: false                    |
+| cty          | string     | null: false                    |
+| build        | string     |                                |
 | address      | string     | null: false                    |
-| phone_number | integer    | null: false                    |
+| phone_number | string     | null: false                    |
 | order_id     | references | null: false, foreign_key: true |
 
 ### Association
