@@ -7,4 +7,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :postage
   belongs_to_active_hash :region
   belongs_to_active_hash :post_day
+
+  with_options presence: true do
+    
 end
