@@ -24,9 +24,14 @@ class ItemsController < ApplicationController
 
   def update
     item = Item.find(params[:id])
-    item.update
+    item.update(item_params)
+    if item.save
+      redirect_to item_path(params[:id])
+    else
+      render :edit
+    end
   end
-  
+
   def show
   end
 
