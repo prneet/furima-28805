@@ -125,7 +125,7 @@
     <h2 class='title'>ピックアップカテゴリー</h2>
     <%= link_to '新規投稿商品', "#", class: "subtitle" %>
     <ul class='item-lists'>
-      <%= @items.each do |item| %>
+      <% @items.each do |item| %>
         <li class='list'>
           <%= link_to item_path(item.id), method: :get do %>
           <div class='item-img-content'>
@@ -180,8 +180,8 @@
 </div>
 <div class='purchase-btn'>
   <span class='purchase-btn-text'>出品する</span>
-  <a href="/items/new">
+  <%= link_to new_item_path do %>
     <%= image_tag 'camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
-  </a>
+  <% end %>
 </div>
 <%= render "shared/footer" %>
