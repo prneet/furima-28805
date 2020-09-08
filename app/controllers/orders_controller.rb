@@ -5,9 +5,11 @@ class OrdersController < ApplicationController
   end
 
   def new
+    @order = OrderAddress.new
   end
 
   def create
+    @order = OrderAddress.new(order_params)
   end
 
   private
@@ -17,6 +19,6 @@ class OrdersController < ApplicationController
   end
 
   def order_params
-    params.require(:user).permit(:name, :name_reading, :nickname)
+    params.require(:order_address).permit(:user_id, :order_id, :postal_code, :genre_id, :city, :address, :build, :phone_number)
   end
 end
