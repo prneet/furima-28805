@@ -74,7 +74,7 @@ Things you may want to cover:
 | ------------ | ---------- | ------------------------------ |
 | postal_code  | string     | null: false                    |
 | region_id    | integer    | null: false                    |
-| cty          | string     | null: false                    |
+| city          | string     | null: false                    |
 | build        | string     |                                |
 | address      | string     | null: false                    |
 | phone_number | string     | null: false                    |
