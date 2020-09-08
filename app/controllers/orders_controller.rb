@@ -10,6 +10,12 @@ class OrdersController < ApplicationController
 
   def create
     @order = OrderAddress.new(order_params)
+    if @order.valid?
+      @order.save
+      return redirect_to root_path
+    else
+      render "index"
+    end
   end
 
   private
