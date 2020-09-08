@@ -2,9 +2,6 @@ class OrdersController < ApplicationController
   before_action :set_item
 
   def index
-  end
-
-  def new
     @order = OrderAddress.new
   end
 
@@ -15,7 +12,7 @@ class OrdersController < ApplicationController
       @order.save
       return redirect_to root_path
     else
-      render "index"
+      render :index
     end
   end
 
