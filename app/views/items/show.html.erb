@@ -32,7 +32,7 @@
     <%# //出品者のみ編集削除リンクの表示 %>
     <%# 売り切れでない場合、出品者以外に購入リンクの表示 %>
     <% if user_signed_in? && current_user.id != @item.user_id && @item.order == nil %>
-      <%= link_to '購入画面に進む', "#" ,class:"item-red-btn"%>
+      <%= link_to '購入画面に進む', orders_path(item_id: @item.id), class:"item-red-btn"%>
     <% end %>
     <%# //売り切れでない場合、出品者以外に購入リンクの表示 %>
 
